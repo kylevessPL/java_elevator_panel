@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("elevator.fxml"));
         primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("favicon.png")));
         primaryStage.setTitle("Elevator panel");
-        primaryStage.setScene(new Scene(root, 263, 650));
+        primaryStage.setScene(new Scene(root, 263, 792));
         primaryStage.show();
     }
 
