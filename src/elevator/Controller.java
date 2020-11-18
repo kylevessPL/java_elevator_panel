@@ -11,16 +11,18 @@ public class Controller {
     public TextField display;
 
     public Integer currentFloor = 0;
+    public boolean up = true;
 
     public void numButtonOnClick(ActionEvent actionEvent) {
         ToggleButton button = ((ToggleButton) actionEvent.getSource());
         if (button.isSelected()) {
             Integer floor = Integer.parseInt(button.getText());
             if (floor > currentFloor) {
-                display.setText(floor + " ↑");
+                up = true;
             } else if (floor < currentFloor) {
-                display.setText(floor + " ↓");
+                up = false;
             }
+            display.setText(floor + (up ? " ↑" : " ↓"));
             currentFloor = floor;
         }
     }
