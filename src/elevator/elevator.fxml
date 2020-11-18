@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
@@ -11,6 +13,9 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="792.0" prefWidth="263.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="elevator.Controller">
     <ImageView fitHeight="792.0" fitWidth="263.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <Image url="@texture.png" />
+      <effect>
+         <Blend mode="SRC_ATOP" />
+      </effect>
     </ImageView>
     <TextField fx:id="display" alignment="CENTER" disable="true" editable="false" layoutX="22.0" layoutY="20.0" prefHeight="139.0" prefWidth="219.0" text="0 ↑" />
     <GridPane alignment="CENTER" layoutX="30.0" layoutY="159.0" prefHeight="634.0" prefWidth="203.0">
@@ -32,7 +37,6 @@
          <toggleGroup>
             <ToggleGroup fx:id="buttonGroup" />
          </toggleGroup></ToggleButton>
-        <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="⛭" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="8" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="9" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="6" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
@@ -43,10 +47,11 @@
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="3" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="0" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
         <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#numButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="1" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-        <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="🔔" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-        <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="&lt; | &gt;" toggleGroup="$buttonGroup" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
-        <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="✖" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
-        <ToggleButton minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="&gt; | &lt;" toggleGroup="$buttonGroup" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+      <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="🔔" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="✖" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+      <Button alignment="CENTER" layoutX="28.0" layoutY="488.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="&lt; | &gt;" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+      <Button alignment="CENTER" layoutX="28.0" layoutY="563.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="&gt; | &lt;" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+      <Button alignment="CENTER" layoutX="129.0" layoutY="563.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#otherButtonOnClick" prefHeight="67.0" prefWidth="67.0" text="⛭" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
       <opaqueInsets>
          <Insets />
       </opaqueInsets>

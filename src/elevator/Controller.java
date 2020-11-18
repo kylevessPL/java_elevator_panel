@@ -2,6 +2,7 @@ package elevator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 
@@ -28,7 +29,7 @@ public class Controller {
     }
 
     public void otherButtonOnClick(ActionEvent actionEvent) {
-        display.setText(((ToggleButton) actionEvent.getSource()).getText());
+        display.setText(((Button) actionEvent.getSource()).getText());
     }
 
 }
