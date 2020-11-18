@@ -3,6 +3,10 @@
     src: url('7seg.ttf');
 }
 
+.anchor-pane {
+
+}
+
 .text-field {
     -fx-font-family: "Seven Segment", sans-serif;
     -fx-font-size: 100px;
@@ -21,6 +25,8 @@
     -fx-border-width: 6px;
     -fx-border-radius: 40px;
     -fx-background-radius: 40px;
+    -fx-background-insets: 0, 1;
+    -fx-effect: dropshadow(three-pass-box , black, 25, 0, 0, 1);
 }
 
 .toggle-button:selected, .button:pressed {
